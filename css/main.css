@@ -1,0 +1,243 @@
+
+
+
+:root{
+  --hero-title-cl:#FEFCF7;
+  --text-cl: #333D4B;
+}
+
+
+/* fraunces-900 - latin */
+@font-face {
+  font-family: "Fraunces";
+  font-weight: 900;
+  src: url("../fonts/fraunces-v23-latin-900.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */
+  url("../fonts/fraunces-v23-latin-900.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* barlow-regular - latin */
+@font-face {
+  font-family: "Barlow";
+  font-weight: 400;
+  src: url("../fonts/barlow-v12-latin-regular.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */
+  url("../fonts/barlow-v12-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* barlow-700 - latin */
+@font-face {
+  font-family: "Barlow";
+  font-weight: 700;
+  src: url("../fonts/barlow-v12-latin-700.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */
+  url("../fonts/barlow-v12-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+*{
+  box-sizing: border-box;
+}
+
+html{
+  height: 100%;
+}
+
+img{
+  display: block;
+  height: auto;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* CONTAINER */
+
+.container{
+  width: 100%;
+  max-width: 1340px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* STICKY-FOOTER */
+.site-main{
+  flex-grow: 1;
+}
+
+/* header start */
+.site-header{
+  padding: 32px 0 40px 0;
+}
+
+.site-header__wrapper{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.site-header__btn{
+  width: 16px;
+  height: 15px;
+  background-image: url("../images/hamburger.svg");
+  background-color: transparent;
+  border: 0;
+}
+
+.sitenav{
+  display: none;
+}
+
+.sitenav__list{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.sitenav__item:not(:last-child){
+  margin-right: 32px;
+}
+
+.sitenav__link{
+  font-family: "Barlow", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.923077px;
+  text-transform: uppercase;
+  color: #83888F;
+  text-decoration: none;
+}
+
+/* header start */
+
+.hero__wrapper{
+  padding: 100px 0;
+  color: var(--hero-title-cl);
+  background-image: url("../images/ml-hero-bgimg.jpg");
+  background-size: cover;
+  border-radius: 10px;
+}
+
+.hero__info{
+  text-align: center;
+  max-width: 327px;
+  padding:0 6px;
+  margin: 0 auto;
+}
+
+.hero__title{
+  margin: 0;
+  margin-bottom: 24px;
+  font-family: 'Fraunces', "Times New Roman", serif;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+.hero__text{
+  margin: 0;
+  margin-bottom: 39px;
+  font-family: "Barlow", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.hero__link{
+  display: inline-block;
+  padding: 15px 31px;
+  font-family: 'Fraunces', "Times New Roman", serif;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 25px;
+  color: var(--hero-title-cl);
+  background-color: #0E8784;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 400px){
+  .hero__wrapper{
+    padding: 104px 0;
+    background-image: url("../images/tl-hero-bgimg.jpg");
+  }
+}
+
+@media only screen and (min-width: 600px){
+
+  .hero__wrapper{
+    padding: 104px 0;
+    color: var(--hero-title-cl);
+    background-image: url("../images/tl-hero-bgimg.jpg");
+  }
+
+  .logo__img{
+    min-width: 236px;
+    height: 26px;
+  }
+
+  .site-header__btn{
+    display: none;
+  }
+
+  .sitenav{
+    display: block;
+  }
+
+  .hero__info{
+    min-width: 398px;
+    margin-left: 58px;
+    text-align: left;
+    padding: 0;
+  }
+
+  .hero__title{
+    font-size: 48px;
+    line-height: 48px;
+  }
+
+}
+
+@media only screen and (min-width: 768px){
+  .hero__wrapper{
+    padding: 117px 0;
+    background-image: url("../images/ds-hero-bgimg.jpg");
+  }
+
+  .hero__info{
+    max-width: 493px;
+    margin-left: 86px;
+  }
+
+  .hero__title{
+    font-size: 72px;
+    line-height: 72px;
+  }
+
+  .hero__text{
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
