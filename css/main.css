@@ -124,8 +124,11 @@ ul{
   width: 100%;
   display: block;
   padding-top: 40px;
-  padding-bottom: 365px;
+  padding-bottom: 185px;
   background-image: linear-gradient(0deg, rgba(254, 252, 247, 0.504981) 0%, #FEFCF7 55.94%);
+  animation-name: slidedown;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
 }
 
 .sitenav__list{
@@ -193,7 +196,7 @@ ul{
   border-radius: 10px;
 }
 
-.hero__info{
+.hero__info, .intro__info{
   text-align: center;
   max-width: 327px;
   padding:0 6px;
@@ -535,14 +538,205 @@ ul{
 .social-media__item:not(:last-child){
   margin-right: 24px;
 }
+.intro{
+  padding-bottom: 120px;
+}
+.intro__wrapper{
+  padding: 100px 0;
+  color: var(--hero-title-cl);
+  background-image: url("../images/about-bg.jpg");
+  background-size: cover;
+  border-radius: 10px;
+}
+
+.intro__title{
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-family: "Fraunces", "Times New Roman", serif;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 26px;
+}
+
+.intro__text{
+  margin: 0;
+  font-family: "Barlow", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.commit__box{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: var(--text-cl);
+}
+
+.commit__box::before{
+  content: "";
+  display:inline-block;
+  width: 274px;
+  height: 320px;
+  margin: 0 auto;
+  margin-bottom: 24px;
+  background-image: url("../images/commit-ds.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.commit__info{
+  max-width: 327px;
+  margin: 0 auto;
+}
+.commit__title, .quality__title{
+  margin-bottom: 22px;
+  font-family: "Fraunces", "Times New Roman", serif;
+  font-size: 26px;
+  line-height: 45px;
+}
+
+.commit__text, .quality__text{
+  margin:0;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  opacity: 0.8;
+}
+
+.quality{
+  padding-top: 198px;
+  padding-bottom: 120px;
+}
+
+.quality__box{
+  position: relative;
+  max-width: 327px;
+  margin: 0 auto;
+  padding: 125px 20px 56px 20px;
+  color: #fff;
+  background-color: #2C343E;
+  text-align: center;
+}
+
+.quality__box::before{
+  content: "";
+  top: -70px;
+  left: 0;
+  right: 0;
+  position: absolute;
+  width: 100%;
+  max-width: 261px;
+  height: 141px;
+  margin: 0 auto;
+  background-image: url("../images/quality.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 5px;
+}
+
+.countries{
+  padding-bottom: 120px;
+}
+
+.countries__wrapper{
+  margin: 0 auto;
+  text-align: center;
+}
+
+.countries__title{
+  margin: 0;
+  margin-bottom: 72px;
+  font-family: "Fraunces", "Times New Roman", serif;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 32px;
+  color: #83888F;
+}
+
+.countries__list{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.countries__item:not(:last-child){
+  margin-bottom: 80px;
+}
+
+.countries__item::before{
+  content: "";
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 47px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.countries__item:nth-child(1)::before{
+  width: 41px;
+  height: 49px;
+  background-image: url("../images/uk.svg");
+}
+
+.countries__item:nth-child(2)::before{
+  width: 52px;
+  height: 50px;
+  background-image: url("../images/canada.svg");
+}
+
+.countries__item:nth-child(3)::before{
+  width: 49px;
+  height: 44px;
+  background-image: url("../images/aus.svg");
+}
+
+.countries__item-title{
+  margin: 0;
+  margin-bottom: 20px;
+  font-family: "Fraunces", "Times New Roman", serif;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 36px;
+  color: var(--text-cl);
+}
+
+.countries__adr{
+  font-style: normal;
+}
+
+.countries__link{
+  font-family: "Barlow", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--text-cl);
+  text-decoration: none;
+}
 
 @media only screen and (min-width: 370px){
-  .hero__info{
+  .hero__info, .intro__info ,.commit__info{
     padding: 0 20px;
   }
 
   .hero__title{
     font-size: 40px;
+  }
+
+  .intro__title{
+    font-size: 28px;
+  }
+
+  .quality__box{
+    padding: 132px 20px 56px 20px;
+  }
+
+  .quality__box::before{
+    top: -78px;
+    max-width: 279px;
+    height: 156px;
+    background-image: url("../images/quality.png");
   }
 }
 
@@ -553,9 +747,12 @@ ul{
     background-position: center;
   }
 
-  .hero__info{
-    padding: 0 20px;
+  .intro__wrapper{
+    padding: 104px 0;
+    background-image: url("../images/about-bg-tb.png");
+    background-position: right;
   }
+
 
   .choose__box{
     max-width: 570px;
@@ -566,16 +763,13 @@ ul{
     max-width: 300px;
   }
 
+  .commit__title, .quality__title{
+    font-size: 28px;
+  }
+
 }
 
 @media only screen and (min-width: 600px){
-
-  .hero__wrapper{
-    padding: 104px 0;
-    color: var(--hero-title-cl);
-    background-image: url("../images/tl-hero-bgimg.jpg");
-    background-position: center;
-  }
 
   .logo__img{
     min-width: 236px;
@@ -626,7 +820,7 @@ ul{
   }
 
 
-  .hero__info{
+  .hero__info, .intro__info{
     min-width: 398px;
     margin-left: 58px;
     text-align: left;
@@ -877,6 +1071,15 @@ ul{
     margin-bottom: 0;
   }
 
+  .commit__info, .quality__box{
+    max-width: 500px;
+  }
+
+  .quality__info{
+    margin: 0 auto;
+    max-width: 450px;
+  }
+
 }
 
 @media only screen and (min-width:660px){
@@ -983,9 +1186,99 @@ ul{
     line-height: 26px;
   }
 
-    .work__bf{
-      max-width: 610px;
-    }
+  .work__bf{
+    max-width: 610px;
+  }
+
+  .intro__info{
+    max-width: 398px;
+  }
+
+  .commit__box{
+    width: 100%;
+    max-width: 690px;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+  .commit__box::before{
+    margin: 0;
+    width: 281px;
+    height: 470px;
+    background-image: url("../images/comment-tb.png");
+  }
+
+  .commit__info{
+    padding: 0;
+    margin: 0;
+    margin-right: 0;
+    margin-left: 40px;
+    text-align: left;
+    max-width: 339px;
+  }
+
+  .commit__title{
+    margin-top: 0;
+  }
+
+  .quality__box{
+    max-width: 688px;
+    padding: 296px 74px 64px 74px;
+    color: #fff;
+    background-color: #2C343E;
+    text-align: center;
+  }
+
+  .quality__box::before{
+    width: 100%;
+    max-width: 573px;
+    height: 320px;
+    background-image: url("../images/quality-tb.png");
+  }
+
+  .quality__info{
+    max-width: 540px;
+  }
+
+  .quality__title{
+    font-size: 32px;
+    line-height: 48px;
+  }
+
+  .quality__text{
+    font-size: 15px;
+    line-height: 25px;
+  }
+
+  .countries__wrapper{
+    max-width: 688px;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .countries__title{
+    margin-bottom: 80px;
+  }
+
+  .countries__list{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .countries__item{
+    width: 223px;
+  }
+
+  .countries__item:not(:last-child){
+    margin-right: 9px;
+    margin-bottom: 0;
+  }
+
+  .countries__item::before{
+    margin: 0;
+    margin-bottom: 48px;
+  }
 
 }
 
@@ -1012,9 +1305,6 @@ ul{
   .footer-wrapper{
     flex-direction: row;
   }
-}
-
-@media only screen and (min-width: 855px){
 
   .work__list{
     padding-top: 90px;
@@ -1022,12 +1312,37 @@ ul{
   .work__bf{
     max-width: 720px;
   }
+
+  .commit__info{
+    margin-left: 60px;
+  }
+  .quality__box, .countries__wrapper{
+    max-width: 700px;
+  }
+
+
+  .quality__box{
+    max-width: 688px;
+    padding: 296px 74px 64px 74px;
+    color: #fff;
+    background-color: #2C343E;
+    text-align: center;
+  }
+
+
 }
 
 @media only screen and (min-width: 1024px){
+
   .hero__wrapper{
     padding: 117px 0;
     background-image: url("../images/ds-hero-bgimg.jpg");
+    background-position: center;
+  }
+
+  .intro__wrapper{
+    padding: 117px 0;
+    background-image: url("../images/about-ds.png");
     background-position: center;
   }
 
@@ -1035,6 +1350,11 @@ ul{
     max-width: 493px;
     margin-left: 86px;
     text-align: left;
+  }
+
+  .intro__info{
+    min-width: 445px;
+    margin-left: 86px;
   }
 
   .hero__title{
@@ -1125,12 +1445,9 @@ ul{
   }
 
   .collection__text{
-
-      font-size: 16px;
-      line-height: 26px;
-
+    font-size: 16px;
+    line-height: 26px;
   }
-
 
   .choose__box{
     max-width: 1280px;
@@ -1170,7 +1487,6 @@ ul{
     left: 140px;
   }
 
-
   .item__box{
     max-width: 255px;
     text-align: center;
@@ -1186,7 +1502,6 @@ ul{
     font-size: 15px;
     line-height: 25px;
   }
-
 
   .work{
     padding-bottom: 189px;
@@ -1235,11 +1550,101 @@ ul{
     line-height: 26px;
   }
 
+  .commit__box{
+    width: 100%;
+    max-width: 920px;
+  }
+
+  .commit__box::before{
+    margin: 0;
+    width: 445px;
+    height: 520px;
+    background-image: url("../images/commit-ds.png");
+  }
+
+  .commit__info{
+    margin-left: 50px;
+    max-width: 440px;
+  }
+
+  .quality__box{
+    width: 100%;
+    max-width: 1110px;
+    padding: 0;
+    padding: 88px 51px 176px 70px;
+    text-align: left;
+  }
+
+  .quality__box::before{
+    top: -70px;
+    right: 20px;
+    left: auto;
+    width: 100%;
+    max-width: 45%;
+    height: 474px;
+    margin: 0 auto;
+    background-image: url("../images/quality-ds.png");
+  }
+
+  .quality__info{
+    max-width: 50%;
+    margin: 0;
+  }
+
+  .quality__title{
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .quality__text{
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .countries__wrapper{
+    max-width: 1045px;
+    margin: 0;
+    margin-left: 85px;
+    text-align: left;
+  }
+
+  .countries__title{
+    margin-bottom: 80px;
+  }
+
+  .countries__list{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .countries__item{
+    width: 285px;
+  }
+
+  .countries__item:not(:last-child){
+    margin-right: 9px;
+    margin-bottom: 0;
+  }
+
+  .countries__item::before{
+    margin: 0;
+    margin-bottom: 48px;
+  }
+
+  .countries__item-title{
+    font-size: 32px;
+    line-height: 36px;
+  }
+
 }
 
 @media only screen and (min-width: 1068px){
   .collection{
     background-position: calc(50%) calc(50% - 165px);
+  }
+
+  .commit__info{
+    max-width: 460px;
   }
 }
 
@@ -1252,4 +1657,28 @@ ul{
   .item__box{
     max-width: 255px;
   }
+
+  .commit__box{
+    max-width: 1110px;
+  }
+
+  .commit__info{
+    max-width: 540px ;
+  }
+
+  .quality__box{
+    max-width: 1280px;
+  }
+}
+
+@keyframes slidedown {
+
+  from{
+    transform: translateX(1000px);
+  }
+
+  to{
+    transform: translateX(0);
+  }
+
 }
