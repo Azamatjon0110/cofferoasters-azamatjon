@@ -2131,6 +2131,7 @@ ul{
 
   .modal-info{
     max-width: 285px;
+    margin: 40px auto;
   }
 
   .modal-title{
@@ -2140,7 +2141,7 @@ ul{
 
   .modal-text{
     font-size: 20px;
-    line-height: 36px;
+    line-height: 30px;
   }
 
   .md-text{
